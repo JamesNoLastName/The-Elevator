@@ -11,10 +11,16 @@ import java.util.*;
  *  - Manual and auto step modes
  *  - Randomly generate passenger requests
  * 
- * Notes for novice Java users:
- *  - Scanner is used to read user input from console
- *  - ArrayList stores dynamic lists of passengers
- *  - StringBuilder is used to build strings efficiently
+ * Assumptions:
+ *  - There are n floors, where n should be a non-negative and non-zero integer (Ideally should have more than 1 floor). Floors start at 01.
+ *  - The algorithm for the elevator should be well-known and intuitive, so I chose the SCAN algorithm (Similar to a bus with stop requests)
+ *  - There is only one elevator in operation for the building.
+ *  - A single "step" is a measureable change of floors (For example moving to another floor to allow passengers on)
+ *  - Passengers have a start and destination in mind when entering the elevator, and these floor values are not the same.
+ *  - This is a "vacuum" simulation, where passengers do not trickle in by themselves at random periods and are added only through add/random
+ *  - The elevator has no space limit, so an infinite-approaching number of passengers can board the elevator at any time.
+ *  - Commands such as add, random, step, auto, status, and quit were assumed to give the user control over simulating the elevator.
+ *  - If the user inputs something not from the commands, the system informs them of the available commands.
  */
 public class Main {
 
